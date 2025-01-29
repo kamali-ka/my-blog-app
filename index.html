@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Blog</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="heading">
+            <div class="logo">
+                <img src="./assets/images/ic_icon.png" alt="logo">
+            </div>
+            <div class="name">
+                <h1>StaticSphere</h1>
+            </div>
+            <button class="bi bi-circle-half theme-toggle" id="theme-toggle"></button>
+        </div>
+    </header>
+ 
+
+    <div class="content">
+        <div class="section categories">
+            <h2>Categories</h2>
+            <div class="categories-row">
+                <div class="category">
+                    <a href="#">
+                        <img src="./assets/images/img_webDevelopment and technology.webp" alt="Web Development">
+                        <p>Technology & Development</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="#">
+                        <img src="./assets/images/img_Personal & Lifestyle.webp" alt="Lifestyle">
+                        <p>Personal & Lifestyle</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="#">
+                        <img src="./assets/images/img_Finance & Money.jpg" alt="Finance">
+                        <p>Finance & Money</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="#">
+                        <img src="./assets/images/img_Creative & Inspirational.jpeg" alt="Creative">
+                        <p>Creative & Inspirational</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="#">
+                        <img src="./assets/images/img_Health & Wellness.png" alt="Health">
+                        <p>Health & Wellness</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section latest">
+            <h2>Latest</h2>
+            <div class="latest-row">
+                <div class="latest-item">
+                    <a href="#">
+                        <img src="./assets/images/img_AI.webp" alt="AI">
+                        <p>How AI Assistants are Shaping Daily Life in 2025</p>
+                    </a>
+                </div>
+                <div class="latest-item">
+                    <a href="#">
+                        <img src="./assets/images/img_newSkills.jpg" alt="Learning Skills">
+                        <p>How to Stay Motivated for Learning New Skills in 2025</p>
+                    </a>
+                </div>
+                <div class="latest-item">
+                    <a href="#">
+                        <img src="./assets/images/img_digitalDetox.webp" alt="Digital Detox">
+                        <p>Digital Detox: Managing Screen Time in a Tech-Obsessed World</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 StaticSphere. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        
+        toggleButton.addEventListener('click', () => {
+            const body = document.body;
+            const currentTheme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
+            
+            // Toggle between light and dark theme classes
+            body.classList.toggle('light-theme', currentTheme === 'dark-theme');
+            body.classList.toggle('dark-theme', currentTheme === 'light-theme');
+            
+            // Toggle button theme class
+            toggleButton.classList.toggle('light-theme', currentTheme === 'dark-theme');
+            toggleButton.classList.toggle('dark-theme', currentTheme === 'light-theme');
+        });
+    </script>
+</body>
+
+</html>
