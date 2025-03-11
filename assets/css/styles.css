@@ -188,7 +188,11 @@ body.light-theme p {
 button.light-theme {
     color: #fff;
 }
+body.light-theme h1,
 
+body.light-theme p{
+    color: white;
+}
 /* Dark Theme */
 body.dark-theme {
     background-color: #121212;
